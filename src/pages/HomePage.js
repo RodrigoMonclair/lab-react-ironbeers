@@ -24,8 +24,6 @@ function HomePage() {
         </Card>
       </Link>
 
-
-
       <Link to="/random-beer">
         <Card style={{ width: "18rem" }}>
           <Card.Img
@@ -42,8 +40,6 @@ function HomePage() {
           </Card.Body>
         </Card>
       </Link>
-
-
 
       <Link to="/new-beer">
         <Card style={{ width: "18rem" }}>
