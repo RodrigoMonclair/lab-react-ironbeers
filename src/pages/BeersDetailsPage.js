@@ -18,7 +18,7 @@ function BeersDetailsPage({beers}){
 
 console.log(beerSelected)
     return(
-        <div>
+        <div className='single'>
             <NavBar />
             <div>
             <img src={beerSelected.image} alt="..." width={"200px"}/>

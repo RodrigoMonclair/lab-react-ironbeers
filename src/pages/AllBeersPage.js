@@ -2,24 +2,28 @@ import { useState} from "react";
 import {Link} from 'react-router-dom'
 import NavBar from "../componets/NavBar";
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+import SearchBar from "../componets/SearchBar";
+
 
 function AllBeersPage({beers}) {
 
 
-  const [Allbeers, setAllBeers] = useState(beers);
-
+  const [allBeers, setAllBeers] = useState(beers);
+  const [search, setSearch] = useState("")
   
-console.log(Allbeers)
+console.log(allBeers)
   return (
     <div>
       <NavBar />
+      <SearchBar search={search} setSearch={setSearch}/>
       {
         
-        beers.map((beer)=>{
+        allBeers.filter((beer)=>{
+            return beer.name.toLowerCase().includes(search.toLowerCase())
+        }).map((beer)=>{
             return(
               
-                <div key={beer._id} style={{width:"400px", margin:"10px"}}>
+            <div key={beer._id} style={{width:"400px", margin:"10px"}}>
                 <Link to ={`/beers/${beer._id}`} className="list-group-item list-group-item-action">
                 <Card>
                 <Card.Body>

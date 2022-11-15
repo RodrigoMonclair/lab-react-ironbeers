@@ -15,3 +15,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.form > button{
+  height: 80px;
+  width: 80px;
+  margin-top: 20px;
+  border-radius: 50%;
+  color: ghostwhite;
+  background-color: rgb(166, 166, 166);
+  border: none;
+  font-size: 2rem;
+}
+
+.form input{
+  width: 30vw;
+  border-radius: 10px;
+  border: 1px solid rgb(166, 166, 166);
+  padding: 5px 10px;
+}
+
+.allNew{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+
+}
+
+.search{
+  text-align: start;
+  padding: 10px;
+}
+
+.search > input{
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.single{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

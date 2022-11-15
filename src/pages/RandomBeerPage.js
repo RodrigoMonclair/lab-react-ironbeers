@@ -5,13 +5,14 @@ function RandomBeersPage({beers}){
     // console.log(beers)
     const [allBeers, setAllBeers] = useState(beers)
 
-    const beerSelected = allBeers[Math.round(Math.random()*allBeers.length)] 
+    const beerSelected = allBeers[Math.round(Math.random()*allBeers.length)-1] 
     
     
     return(
-        <div>
+        <div className="single">
             <NavBar/>
             <div>
+            
             <img src={beerSelected.image} alt="..." width={"200px"}/>
             <h2>{beerSelected.name}</h2>
             <p>{beerSelected.tagline}</p>
@@ -19,6 +20,7 @@ function RandomBeersPage({beers}){
             <p>{beerSelected.attenuation_level}</p>
             <p>{beerSelected.description}</p>
             <p>{beerSelected.contributed_by}</p>
+            
             </div>
 
         </div>

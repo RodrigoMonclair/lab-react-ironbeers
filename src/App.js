@@ -51,7 +51,7 @@ function App() {
 
         <Route
           path="new-beer"
-          element={<NewBeersPage />}
+          element={<NewBeersPage beers={beers}/>}
         />
       </Routes>
     </div>
