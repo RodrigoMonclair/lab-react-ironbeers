@@ -1,21 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import {Link} from 'react-router-dom'
-import axios from "axios";
 import NavBar from "../componets/NavBar";
-import ListGroup from 'react-bootstrap/ListGroup';
 
-function AllBeersPage() {
-  const [beers, setBeers] = useState([]);
+function AllBeersPage({beers}) {
 
-  useEffect(() => {
-    async function fetchBeers() {
-      const response = await axios.get("https://ironbeer-api.fly.dev/");
-    //   console.log(response.data)
-      setBeers(response.data);
-    }
-    fetchBeers();
-  }, []);
-// console.log(beers)
+
+  const [Allbeers, setAllBeers] = useState(beers);
+
+  
+console.log(Allbeers)
   return (
     <div>
       <NavBar />

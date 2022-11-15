@@ -5,9 +5,26 @@ import NewBeersPage from "./pages/NewBeersPage";
 import RandomBeersPage from "./pages/RandomBeerPage";
 import HomePage from "./pages/HomePage";
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./componets/NavBar";
+import {useState, useEffect} from 'react'
+import { useParams, Link } from 'react-router-dom';
+import axios from "axios";
 
 function App() {
+
+  const [beers, setBeers] = useState([]);
+    
+
+
+  useEffect(() => {
+    async function fetchBeers() {
+      const response = await axios.get(`https://ironbeer-api.fly.dev/`);
+      // console.log(response.data)
+      setBeers(response.data);
+    }
+    fetchBeers();
+  }, []);
+
+
   return (
     <div className="App">
       
@@ -19,7 +36,7 @@ function App() {
 
         <Route
           path="/beers"
-          element={<AllBeersPage />}
+          element={<AllBeersPage beers={beers}/>}
         ></Route>
 
         <Route
@@ -29,7 +46,7 @@ function App() {
 
         <Route
           path="/beers/:beerId"
-          element={<BeersDetailsPage />}
+          element={<BeersDetailsPage beers={beers}/>}
         />
 
         <Route

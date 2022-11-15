@@ -1,11 +1,11 @@
-import NavBar from "../componets/NavBar"
+import NavBar from "../componets/NavBar";
 
-function NewBeersPage(){
-    return(
-        <div>
-            <NavBar />
-        </div>
-    )
+function NewBeersPage() {
+  return (
+    <div>
+      <NavBar />
+    </div>
+  );
 }
 
-export default NewBeersPage
+export default NewBeersPage;
