@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 function HomePage() {
   return (
     <div>
-      <Link to="/beers">
+      <Link to="/beers" className="list-group-item list-group-item-action">
         <Card style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
@@ -24,7 +24,7 @@ function HomePage() {
         </Card>
       </Link>
 
-      <Link to="/random-beer">
+      <Link to="/random-beer" className="list-group-item list-group-item-action">
         <Card style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
@@ -41,7 +41,7 @@ function HomePage() {
         </Card>
       </Link>
 
-      <Link to="/new-beer">
+      <Link to="/new-beer" className="list-group-item list-group-item-action">
         <Card style={{ width: "18rem" }}>
           <Card.Img
             variant="top"

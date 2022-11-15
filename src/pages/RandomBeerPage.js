@@ -12,7 +12,7 @@ function RandomBeersPage({beers}){
         <div>
             <NavBar/>
             <div>
-            <img src={beerSelected.image} alt="..."/>
+            <img src={beerSelected.image} alt="..." width={"200px"}/>
             <h2>{beerSelected.name}</h2>
             <p>{beerSelected.tagline}</p>
             <p>{beerSelected.first_brewed}</p>
