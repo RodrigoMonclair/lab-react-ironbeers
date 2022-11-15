@@ -41,7 +41,7 @@ function App() {
 
         <Route
           path="/random-beer"
-          element={<RandomBeersPage />}
+          element={<RandomBeersPage beers={beers}/>}
         ></Route>
 
         <Route

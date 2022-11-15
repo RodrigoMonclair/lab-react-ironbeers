@@ -4,7 +4,7 @@ import NavBar from '../componets/NavBar';
 
 
 function BeersDetailsPage({beers}){
-    const [Allbeers, setAllBeers] = useState(beers);
+    const [allBeers, setAllBeers] = useState(beers);
     
 
     const { beerId } = useParams();
@@ -12,7 +12,7 @@ function BeersDetailsPage({beers}){
 
     console.log(beerId)
 
-    const beerSelected = beers.find((beer) => {
+    const beerSelected = allBeers.find((beer) => {
         return beer._id === beerId;
 })
 
